@@ -19,3 +19,9 @@ export const postData = async (data: PersonProps): Promise<Response> => {
     });
     return response;
 }
+
+export const getPageData = async (page:number):Promise<PersonProps[]>=>{
+    const res = await fetch(`http://localhost:3000/api/data${page}.json`);
+    const data = await res.json()
+    return data
+}
