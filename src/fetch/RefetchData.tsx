@@ -14,10 +14,14 @@ const Person  = ({name,email,nickname,role,mbti} : PersonProps)=>{
     )
 }
 
-const GetData = () =>{
-    const {isLoading,isError,data,error} = useQuery<PersonProps[]>('data',getData)
+const RefetchData = () =>{
+    const {isLoading,isError,data,error,refetch} = useQuery<PersonProps[]>('data',getData,{
+    enabled:false
+    })
     
-    
+    const handleGetData = ()=>{
+        refetch();
+    }
     if (isLoading) {
       return <span>Loading...</span>
     }
@@ -28,6 +32,7 @@ const GetData = () =>{
     
     return(
         <div>
+            <button onClick={handleGetData}>refetch</button>
             {data?.map(it => (
                 <Person key={it.email} name={it.name} email={it.email} nickname={it.nickname} role ={it.role} mbti = {it.mbti}></Person>
             ))}
@@ -35,4 +40,4 @@ const GetData = () =>{
     );
 }
 
-export default GetData;
+export default RefetchData;
