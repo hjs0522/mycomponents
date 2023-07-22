@@ -40,3 +40,7 @@
 form {
   display: flex;
 }
+
+.Suggestion__item--selected {
+  background-color: #BEE3F8;
+}
