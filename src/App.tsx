@@ -1,18 +1,15 @@
 import React from 'react';
 import './App.css';
 import { QueryClient, QueryClientProvider } from 'react-query';
-import InfinityScroll from './fetch/InfinityScroll';
-import GetData from './fetch/GetData';
-import RefetchData from './fetch/RefetchData';
-import SearchInput from './component/SearchInput';
-
+import { RouterProvider } from 'react-router-dom';
+import router from './router';
 const queryClient = new QueryClient();
 
 function App() {
   return (
     <div className="App">
       <QueryClientProvider client={queryClient}>
-        <SearchInput></SearchInput>
+        <RouterProvider router={router}></RouterProvider>
       </QueryClientProvider>
     </div>
   );
