@@ -1,3 +1,4 @@
+import { sleep } from "react-query/types/core/utils";
 import { PersonProps } from "../interface";
 
 export const getData = async ():Promise<PersonProps[]>=>{

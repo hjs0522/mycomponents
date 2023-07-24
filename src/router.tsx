@@ -1,5 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import SearchInput from "./component/SearchInput";
+import UsingLocalStorage from "./component/UsingLocalStorage";
 import GetData from "./fetch/GetData";
 
 const router = createBrowserRouter([
@@ -10,6 +11,10 @@ const router = createBrowserRouter([
     {
         path: '/search',
         element:<SearchInput></SearchInput>
+    },
+    {
+        path: '/UsingLocalStorage',
+        element:<UsingLocalStorage></UsingLocalStorage>
     }
 ])
 
