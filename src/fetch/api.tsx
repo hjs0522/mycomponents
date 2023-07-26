@@ -1,5 +1,5 @@
 import { sleep } from "react-query/types/core/utils";
-import { PersonProps } from "../interface";
+import { PersonProps } from "../utils/interface";
 
 export const getData = async ():Promise<PersonProps[]>=>{
     const res = await fetch(`http://localhost:3000/api/data.json`);

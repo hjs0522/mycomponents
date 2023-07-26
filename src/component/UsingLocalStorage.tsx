@@ -1,6 +1,6 @@
 import { getData } from "../fetch/api"
 import { useQuery } from "react-query"
-import { PersonProps } from "../interface"
+import { PersonProps } from "../utils/interface"
 
 const Person  = ({name,email,nickname,role,mbti} : PersonProps)=>{
     return(

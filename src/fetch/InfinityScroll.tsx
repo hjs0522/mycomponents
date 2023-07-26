@@ -1,6 +1,6 @@
 import React, { useEffect,useRef,useCallback } from "react";
 import { useInfiniteQuery } from "react-query";
-import { PersonProps } from "../interface";
+import { PersonProps } from "../utils/interface";
 import { getPageData } from "./api";
 
 const Person  = ({name,email,nickname,role,mbti} : PersonProps)=>{

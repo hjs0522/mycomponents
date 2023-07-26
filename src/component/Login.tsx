@@ -1,4 +1,4 @@
-import { KAKAO_AUTH_URL } from "../OAuth";
+import { KAKAO_AUTH_URL } from "../utils/OAuth";
 
 const Login = ()=>{
     return(
