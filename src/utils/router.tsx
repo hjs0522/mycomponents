@@ -4,11 +4,28 @@ import UsingLocalStorage from "../component/UsingLocalStorage";
 import GetData from "../fetch/GetData";
 import Counter from "../component/Counter";
 import SeeRecoilValue from "../component/SeeRecoilValue";
-
+import LinkButton from "../component/LinkButton";
+import SimplePageA from "../component/SimplePageA";
+import SimplePageB from "../component/SimplePageB";
+import SimplePageC from "../component/SimplePageC";
 const router = createBrowserRouter([
     {
         path: '/',
-        element: <GetData></GetData>,
+        element: <LinkButton></LinkButton>,
+        children:[
+            {
+                path:'/a',
+                element:<SimplePageA></SimplePageA>
+            },
+            {
+                path:'/b',
+                element:<SimplePageB></SimplePageB>
+            },
+            {
+                path:'/c',
+                element:<SimplePageC></SimplePageC>
+            }
+        ]
     },
     {
         path: '/search',
